@@ -1,3 +1,6 @@
 title: "My Portfolio"
+author: "Mr Nice Guy"
+description: "A portfolio"
+lang: en
 
 theme: jekyll-theme-midnight
