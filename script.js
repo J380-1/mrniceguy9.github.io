@@ -2,15 +2,25 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       console.log(entry);
       if (entry.isIntersecting) {
-        entry.target.classList.add("show");
+        if (entry.target.classList.contains("hidden2")) {
+          entry.target.classList.add("show2");
+        }
+        else {
+          entry.target.classList.add("show");
+        }
       } else {
         entry.target.classList.remove("show");
+        entry.target.classList.remove("show2");
       }
     });
 });
   
 const hiddenElements = document.querySelectorAll(".hidden");
+const hiddenElements2 = document.querySelectorAll(".hidden2");
+
 hiddenElements.forEach((el) => observer.observe(el));
+hiddenElements2.forEach((el) => observer.observe(el));
+
 
 var viewButtons = document.querySelectorAll(".map-grid button#view-map");
 viewButtons.forEach(function(button) {
@@ -22,11 +32,11 @@ viewButtons.forEach(function(button) {
                 if (mapTitle.innerHTML.includes(" ")) {
                     const newTitle = mapTitle.innerHTML.replace(/ /g, "_"); // Corrected this line
                     console.log(newTitle.toLowerCase());
-                    window.location.replace("https://mrniceguy9.github.io/maps/" + newTitle.toLowerCase() + ".html");
+                    window.location.replace("http://127.0.0.1:5500/maps/" + newTitle.toLowerCase() + ".html");
                 }
                 else {
                     console.log(mapTitle.innerHTML.toLowerCase());
-                    window.location.replace("https://mrniceguy9.github.io/maps/" + mapTitle.innerHTML.toLowerCase() + ".html");
+                    window.location.replace("http://127.0.0.1:5500/maps/" + mapTitle.innerHTML.toLowerCase() + ".html");
                 }
             }
         }
@@ -46,30 +56,69 @@ buttons.forEach(function(button) {
 var mapImages = document.querySelectorAll("#mapImage");
 mapImages.forEach(function(map) {
   map.addEventListener("click", function (event) {
-    document.querySelectorAll(".overlay").style.display = "block";
+    console.log("Hello World!")
+    document.querySelector("#overlay").style.display = "flex";
+    document.getElementById("overlayImage").src = map.src;
   })
 })
 
-var slideIndex = 1;
-showDivs(slideIndex);
+const overlay = document.getElementById("overlay");
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
+if (overlay) {
+  document.getElementById("overlay").addEventListener("click", function () {
+    document.querySelector("#overlay").style.display = "none";
+  })
 }
 
-function showDivs(n) {
+
+document.addEventListener("DOMContentLoaded", function () {
+  var slideIndex = 1;
+  showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("myMaps");
+    if (x.length === 0) return; // Check if there are no elements with class "myMaps"
+    
+    if (n > x.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = x.length; }
+    
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    
+    x[slideIndex - 1].style.display = "block";
+  }
+})
+
+
+
+var slideIndex2 = 1;
+showDivs2(slideIndex2);
+
+function plusDivs2(n) {
+  showDivs2(slideIndex2 += n);
+}
+
+function showDivs2(n) {
   var i;
-  var x = document.getElementsByClassName("myMaps");
-  if (x.length === 0) return; // Check if there are no elements with class "myMaps"
+  var x = document.getElementsByClassName("myQuotes");
+  if (x.length === 0) return;
   
-  if (n > x.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = x.length; }
+  if (n > x.length) { slideIndex2 = 1; }
+  if (n < 1) { slideIndex2 = x.length; }
   
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
   
-  x[slideIndex - 1].style.display = "block";
+  x[slideIndex2 - 1].style.display = "block";
 }
 
 var elements = document.getElementsByClassName("game-mode1");
@@ -77,7 +126,7 @@ var elements = document.getElementsByClassName("game-mode1");
 for (var i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", function () {
     console.log("Hello!");
-    window.location.href = "https://mrniceguy9.github.io/games/beginner.html";
+    window.location.href = "http://127.0.0.1:5500/games/beginner.html";
   });
 }
 
@@ -89,12 +138,17 @@ let map2;
 let answer;
 
 function newMap() {
-  map1 = Math.floor(Math.random() * 2) + 1;
+  map1 = Math.floor(Math.random() * 3) + 1;
 
   let newMap2;
   do {
     newMap2 = Math.floor(Math.random() * 2) + 1;
   } while (newMap2 === map2);
+
+  let newMap1;
+  do {
+    newMap1 = Math.floor(Math.random() * 3) + 1;
+  } while (newMap1 === map1);
   
   map2 = newMap2;
   guessMap.src = "./game_maps/" + map1 + "/" + map2 + ".jpg";
@@ -112,6 +166,8 @@ function getAnswer(num1) {
       return "Bank";
     case 2:
       return "Consulate";
+    case 3:
+      return "Oregon";
   }
 }
 

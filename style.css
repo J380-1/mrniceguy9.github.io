@@ -412,6 +412,19 @@ h1 {
     animation-duration: 1s;
 }
 
+.hidden2 {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.show2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    opacity: 1;
+}
+
 .container-discover {
     position: relative;
     transform: translateY(1150px);
@@ -420,13 +433,26 @@ h1 {
 .slideContainer {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .myMaps {
     border-radius: 10px;
     animation: fadeIn ease 1s;
+    margin-bottom: 30px;
 }
+
+@keyframes slideUp {
+    from {
+        transform: translateY(300px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
 
 @keyframes fadeIn {
     from {
@@ -470,18 +496,125 @@ h1 {
     text-align: center;
 }
 
+.container-quotes {
+    position: relative;
+    transform: translateY(1400px);
+}
+
+.slideContainerQuotes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.buttonContainerQuotes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 480px;
+    transform: translateY(-140px);
+}
+
+.buttonContainerQuotes button {
+    width: 50px;
+}
+
+.display-leftQuotes {
+    cursor: pointer;
+}
+
+.display-leftQuotes:hover {
+    scale: 1.1;
+}
+
+.display-rightQuotes {
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    height: 350px;
+    background-color: rgb(20, 20, 40);
+    position: relative;
+    transform: translateY(1600px);
+}
+
+.footer2 {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(25, 25, 50);
+    position: relative;
+    top: 100%;
+}
+
+.display-rightQuotes:hover {
+    scale: 1.1;
+}
+
+.myQuotes {
+    border-radius: 10px;
+    animation: fadeIn ease 1s;
+    background-color: rgb(20, 20, 40);
+    width: 450px;
+    height: 250px;
+}
+
 .mapSpecific-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.details {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contents {
+    transform: translateX(1%);
+}
+
+#usernameReview {
+    color: white;
+    font-family: "Poppins";
+}
+
+#reviewDesc {
+    color: white;
+    word-wrap: break-word;
+    font-family: "Poppins";
+    transform: translate(-5px, -40px);
+    position: relative;
+    padding: 5px;
+    text-align: left;
+}
+
+#reviewTitle {
+    transform: translateY(-20px);
+    position: relative;
+}
+
+#reviewPFP {
+    background-color: rgb(25, 25, 50);
+    border-radius: 20px;
+    width: 56px;
+    height: 56px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    display: grid;
+    font-size: 25px;
+}
+
 #mapImage {
     width: 450px;
     height: 300px;
+    cursor: pointer;
 }
 
-.overlay {
+#overlay {
     position: fixed; /* Sit on top of the page content */
     display: none; /* Hidden by default */
     width: 100%; /* Full width (cover the whole page) */
@@ -493,6 +626,8 @@ h1 {
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
     cursor: pointer; /* Add a pointer on hover */
+    justify-content: center;
+    align-items: center;
   }
 
 @media all and (max-width: 375px) {
