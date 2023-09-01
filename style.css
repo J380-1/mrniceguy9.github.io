@@ -1,0 +1,551 @@
+li,
+a,
+button {
+    font-family: "Poppins";
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+button {
+    background-color: rgb(15, 15, 15);
+}
+
+button {
+    border: solid;
+    border-width: 1px;
+    border-radius: 20px;
+    height: 40px;
+    width: 150px;
+    padding: 0px 20px;
+    border-color: rgba(255, 255, 255, 0.25);
+    transition: ease 0.3s;
+}
+
+#btnplus:hover {
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10%;
+}
+
+.nav_links {
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a {
+    transition: ease 0.3s;
+}
+
+.nav_links li:hover {
+    transform: translateY(-5px);
+}
+
+.nav_links li a:hover {
+    color: aqua;
+}
+
+#logo {
+    cursor: pointer;
+    color: white;
+    font-family: "Poppins";
+}
+
+body {
+    background: linear-gradient(rgb(25, 25, 40), rgb(15, 15, 15));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#r6 {
+    width: 100%;
+    overflow-x: auto;
+    z-index: -1;
+    position: absolute;
+    top: calc(100% - 1000px);
+    height: 100%;
+    left: calc(1% - 20px);
+    image-rendering: auto;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-background {
+    margin-top: 20px;
+    background-color: rgb(20, 20, 40);
+    width: 900px;
+    height: 800px;
+    overflow: auto;
+    border-width: 1px;
+    border: solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    animation: slideIn ease 1s;
+    border-radius: 5px;
+}
+
+h1 {
+    font-family: "Poppins";
+    color: white;
+}
+
+#desc {
+    font-family: "Poppins";
+    color: white;
+    text-align: center;
+}
+
+.map {
+    background-color: rgb(25, 25, 40);
+    border-radius: 10px;
+    width: 250px;
+    height: 300px;
+    margin-bottom: 20px;
+    animation: spreadOut ease 1.3s;
+}
+
+.map-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#map-image {
+    width: 100%;
+    height: 50%;
+    border-radius: 5px 5px 0px 0px;
+}
+
+#map-title {
+    color: white;
+    text-align: center;
+    font-family: "Poppins";
+}
+
+#view-map {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    border-radius: 0px;
+    background-color: rgb(70, 130, 180);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#view-map:hover {
+    background-color: rgb(90, 160, 210);
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes spreadOut {
+    from {
+        margin-bottom: 0px;
+    }
+    to {
+        margin-bottom: 20px;
+    }
+}
+
+.game-mode1 {
+    width: 600px;
+    background-color: rgb(25, 25, 40);
+    height: 100px;
+    margin-left: 190px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    animation: slideLeft ease 0.5s;
+    cursor: pointer;
+}
+
+.game-mode2 {
+    width: 600px;
+    background-color: rgb(25, 25, 40);
+    height: 100px;
+    margin-left: 190px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    animation: slideRight ease 0.5s;
+    cursor: pointer;
+}
+
+.game-mode3 {
+    width: 600px;
+    background-color: rgb(25, 25, 40);
+    height: 100px;
+    margin-left: 190px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    animation: slideLeft ease 0.5s;
+    cursor: pointer;
+}
+
+#guessMap {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.guessing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+#mapGuess {
+    background-color: rgb(25, 25, 40);
+    border: solid;
+    border-radius: 10px;
+    border-color: rgba(255, 255, 255, 0.25);
+    border-width: 1px;
+    height: 28px;
+    color: white;
+    font-family: "Poppins";
+    font-size: 18px;
+    padding: 5px;
+}
+
+#guessTotal {
+    list-style: disc;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    gap: 10px;
+}
+
+#guess1 {
+    display: none;
+    list-style: disc;
+}
+
+#guess2 {
+    display: none;
+}
+
+#guess3 {
+    display: none;
+}
+
+#guessButton {
+    cursor: pointer;
+}
+
+#gtl {
+    margin-left: 190px;
+}
+
+#modeTitle {
+    pointer-events: none;
+    margin-bottom: 2px;
+    position: relative;
+    top: calc(100% - 120px);
+    margin-left: 5px;
+}
+
+#modeDesc {
+    color: white;
+    font-family: "Poppins";
+    pointer-events: none;
+    position: relative;
+    top: calc(100% - 130px);
+    margin-left: 5px;
+}
+
+#mapList {
+    animation: none;
+    background-color: rgb(20, 20, 40);
+    color: white;
+    font-family: "Poppins";
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px;
+    border: solid;
+    border-color: rgba(255, 255, 255, 0.25);
+    border-width: 1px;
+}
+
+.gradient {
+    width: 100%;
+    height: 10px;
+
+    background: linear-gradient(to right, rgb(30,144,255), rgb(0,191,255));
+    pointer-events: none;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.game-mode:hover {
+    cursor: pointer;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(150px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-150px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 80px;
+}
+
+.feature {
+    background-color: rgb(25, 25, 40);
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+    border-radius: 10px;
+    transition: ease 0.5s;
+}
+
+.feature:hover {
+    scale: 1.1;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgb(78, 78, 119);
+}
+
+.container {
+    position: relative;
+    transform: translateY(900px);
+}
+
+#features {
+    text-align: center;
+    font-size: 65px;
+}
+
+#icon {
+    color: white;
+    font-size: 65px;
+    background-color: rgb(35, 35, 55);
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    place-items: center;
+    box-shadow:
+    0 0 5px 5px rgb(78, 78, 119);  /* inner white */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 5%;
+}
+
+#feature-title {
+    text-align: center;
+}
+
+#feature-desc {
+    text-align: center;
+    color: white;
+    font-family: "Poppins";
+}
+
+.hidden {
+    opacity: 0;
+    transition: ease 3s;
+}
+  
+.show {
+    opacity: 1;
+    animation: slideIn;
+    animation-duration: 1s;
+}
+
+.container-discover {
+    position: relative;
+    transform: translateY(1150px);
+}
+
+.slideContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myMaps {
+    border-radius: 10px;
+    animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 320px;
+    transform: translateY(-110px);
+}
+
+.buttonContainer button {
+    width: 50px;
+}
+
+.display-left {
+    cursor: pointer;
+}
+
+.display-left:hover {
+    scale: 1.1;
+}
+
+.display-right {
+    cursor: pointer;
+}
+
+.display-right:hover {
+    scale: 1.1;
+}
+
+#discover {
+    font-size: 65px;
+    text-align: center;
+}
+
+.mapSpecific-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#mapImage {
+    width: 450px;
+    height: 300px;
+}
+
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+
+@media all and (max-width: 375px) {
+    #r6 {
+        width: 104%;
+        overflow-x: hidden;
+        z-index: -1;
+        position: absolute;
+        top: calc(100% - 700px);
+        height: 100%;
+        left: calc(1% - 20px);
+    }
+
+    #logo {
+        cursor: pointer;
+        color: white;
+        font-family: "Poppins";
+        font-size: 16px;
+    }
+
+    .nav_links li a {
+        font-size: 12px;
+    }
+
+    .nav_links {
+        display: grid;
+        grid-area: auto;
+    }
+
+    .ac button {
+        scale: 0.6;
+    }
+
+    .features-container {
+        display: block;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hidden {
+        opacity: 1;
+    }
+      
+    .show {
+        opacity: 1;
+        animation: none;
+    }
+
+    .feature {
+        scale: 0.5;
+    }
+
+    .feature:hover {
+        scale: 0.6;
+    }
+}
