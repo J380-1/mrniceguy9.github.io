@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-75FFMZZ490"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-75FFMZZ490');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    
+</head>
+<body>
+    <header>
+        <h1 id="logo">mrniceguy9.github.io</h1>
+        <nav>
+        <ul class="nav_links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="maps.html" id="maps-ref">Maps</a></li>
+            <li><a href="#" id="scrollToPrice">Forums</a></li>
+            <li><a href="games.html">Games</a></li>
+        </ul>
+        </nav>
+        <a class="ac" href="#"><button id="btnplus">Account</button></a>
+    </header>
+
+    <img src="rainbowsix.jpg" id="r6">
+
+    <div class="container">
+        <h1 id="features">Features</h1>
+
+        <section class="hidden">
+            <div class="features-container">
+                <div class="feature">
+                    <i class="fa-solid fa-question" id="icon"></i>
+                    <h1 id="feature-title">R6-Guesser</h1>
+                    <p id="feature-desc">Test your map knowledge by guessing the location from the image</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-map" id="icon"></i>
+                    <h1 id="feature-title">Map Info</h1>
+                    <p id="feature-desc">Improve your map knowledge, supports all ranked maps</p>
+                </div>
+                <div class="feature">
+                    <i class="fa-solid fa-map-pin" id="icon"></i>
+                    <h1 id="feature-title">Discuss Strategy</h1>
+                    <p id="feature-desc">Using the draw-on map feature - discuss strategy with teammates</p>
+                </div>
+            </div>
+        </section>
+
+        
+    </div>
+
+    
+
+    <div class="container-discover">
+        <h1 id="discover">Discover Maps</h1>
+
+        <div class="slideContainer">
+            <img style="width: 300px; height: 200px;" class="myMaps" src="./bank.webp">
+            <img style="width: 300px; height: 200px;" class="myMaps" src="./consulate.avif">
+            <img style="width: 300px; height: 200px;" class="myMaps" src="./labs.jpg">
+            <img style="width: 300px; height: 200px;" class="myMaps" src="./kafe.webp">
+        </div>
+
+        <div class="buttonContainer">
+            <button class="display-left" onclick="plusDivs(-1)"><</button>
+            <button class="display-right" onclick="plusDivs(+1)">></button>
+        </div>
+        
+        
+
+        
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
