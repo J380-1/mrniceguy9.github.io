@@ -32,11 +32,11 @@ viewButtons.forEach(function(button) {
                 if (mapTitle.innerHTML.includes(" ")) {
                     const newTitle = mapTitle.innerHTML.replace(/ /g, "_"); // Corrected this line
                     console.log(newTitle.toLowerCase());
-                    window.location.replace("http://127.0.0.1:5500/maps/" + newTitle.toLowerCase() + ".html");
+                    window.location.replace("https://mrniceguy9.github.io/maps/" + newTitle.toLowerCase() + ".html");
                 }
                 else {
                     console.log(mapTitle.innerHTML.toLowerCase());
-                    window.location.replace("http://127.0.0.1:5500/maps/" + mapTitle.innerHTML.toLowerCase() + ".html");
+                    window.location.replace("https://mrniceguy9.github.io/maps/" + mapTitle.innerHTML.toLowerCase() + ".html");
                 }
             }
         }
@@ -78,7 +78,7 @@ var elements = document.getElementsByClassName("game-mode1");
 for (var i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", function () {
     console.log("Hello!");
-    window.location.href = "http://127.0.0.1:5500/games/beginner.html";
+    window.location.href = "https://mrniceguy9.github.io/games/beginner.html";
   });
 }
 
